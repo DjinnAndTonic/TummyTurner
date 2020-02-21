@@ -2,7 +2,7 @@ package com.foodocs.TummeyTurner.Controller;
 
 import com.foodocs.TummeyTurner.Core.FoodCore;
 import com.foodocs.TummeyTurner.InventoryProperties;
-import com.foodocs.TummeyTurner.Service.InventoryDAO;
+import com.foodocs.TummeyTurner.Service.MenuDAO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +20,11 @@ public class Controller {
     private InventoryProperties planProperties;
 
     @Autowired
-    private InventoryDAO dao;
+    private MenuDAO dao;
 
-    @Operation(description="Get ingredient by ID")
+    @Operation(description="Get menu item by ID")
     @GetMapping("/{id}")
-    public String getIndividualItem(@PathVariable("id") long id, Model model) {
+    public String getMenuItem(@PathVariable("id") long id, Model model) {
         Collection<FoodCore> fullInventory = new ArrayList<>();
         fullInventory.add(dao.getItem(id));
         model.addAttribute("items", fullInventory);
