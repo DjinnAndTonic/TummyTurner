@@ -1,5 +1,7 @@
 package com.foodocs.TummeyTurner.services;
 
+import com.foodocs.TummeyTurner.core.Menu;
+
 public interface MenuDAO {
     public List<Menu> getMenu();
     public Menu getMenuItem(long id);
