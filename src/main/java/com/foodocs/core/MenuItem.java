@@ -5,14 +5,14 @@ import java.util.List;
 public class MenuItem {
     private int menuItemId;
     private String name;
-    private double price;
+    private int price;
     private List<Ingredient> ingredientList;
 
     public MenuItem() {
         super();
     }
 
-    public MenuItem(int menuItemId, String name, double price, List<Ingredient> ingredientList) {
+    public MenuItem(int menuItemId, String name, int price, List<Ingredient> ingredientList) {
         this.menuItemId = menuItemId;
         this.name = name;
         this.price = price;
@@ -39,7 +39,7 @@ public class MenuItem {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

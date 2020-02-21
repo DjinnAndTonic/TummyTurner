@@ -5,8 +5,7 @@ import com.foodocs.core.MenuItem;
 
 import java.util.List;
 
-public interface MenuDAO {
-    public Menu getMenu();
+public interface MenuItemDAO {
     public MenuItem getMenuItem(long id);
     public MenuItem getIngredients(long id);
     public void add(MenuItem menuItem);

@@ -4,10 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TummeyTurnerApplication {
+public class TummyTurnerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TummeyTurnerApplication.class, args);
+//		System.out.println("Hello World");
+
+		SpringApplication app = new SpringApplication(TummyTurnerApplication.class);
+		app.run();
 	}
 
 }
