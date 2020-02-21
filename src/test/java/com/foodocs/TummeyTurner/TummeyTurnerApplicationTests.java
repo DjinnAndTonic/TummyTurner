@@ -16,7 +16,7 @@ class TummeyTurnerApplicationTests {
 	@AutoWired
 	private WebApplicationContent wac;
 	@MockBean
-	private TummeyTurnerDAO mock;
+	private MenuDAO mock;
 	@Test
 	public void testTummyTurnerGet() throws Expection {
 		TummyTurnerMenu menu = new TummyTurnerMenu();
@@ -24,7 +24,7 @@ class TummeyTurnerApplicationTests {
 		menu.setInventory(5);
 		Mockito.when(mock.getItem(Mockito.getAnyLong())).thenReturn(item);
 		MockMvc mvc = MockMvcBuilders.webAppContextSetup(wac).build();
-		MockHttpServletRequestBulider request = MockMvcBuilders.get(urlTemplet"/menuItem/{id}, ..uriVars: 1);
+		MockHttpServletRequestBulider request = MockMvcBuilders.get(urlTemplet"/menuItem/{id}", ..uriVars: 1);
 		ResultActions actions = mvc.perform(request);
 		actions.andExpect(MockMvcResultMatchers.status().isOk());
 		actions.andDo(print());
