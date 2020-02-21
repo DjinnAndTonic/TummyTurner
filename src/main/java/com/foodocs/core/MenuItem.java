@@ -8,6 +8,17 @@ public class MenuItem {
     private double price;
     private List<Ingredient> ingredientList;
 
+    public MenuItem() {
+        super();
+    }
+
+    public MenuItem(int menuItemId, String name, double price, List<Ingredient> ingredientList) {
+        this.menuItemId = menuItemId;
+        this.name = name;
+        this.price = price;
+        this.ingredientList = ingredientList;
+    }
+
     public int getMenuItemId() {
         return menuItemId;
     }

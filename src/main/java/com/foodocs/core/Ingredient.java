@@ -4,6 +4,15 @@ public class Ingredient {
     private int ingredientID;
     private String name;
 
+    public Ingredient(){
+        super();
+    }
+
+    public Ingredient(int ingredientID, String name) {
+        this.ingredientID = ingredientID;
+        this.name = name;
+    }
+
     public int getIngredientID() {
         return ingredientID;
     }

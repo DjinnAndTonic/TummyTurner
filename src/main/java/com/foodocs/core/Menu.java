@@ -5,6 +5,14 @@ import java.util.List;
 public class Menu {
     private List<MenuItem> menuItemList;
 
+    public Menu(){
+        super();
+    }
+
+    public Menu(List<MenuItem> menuItemList) {
+        this.menuItemList = menuItemList;
+    }
+
     public List<MenuItem> getMenuItemList() {
         return menuItemList;
     }
