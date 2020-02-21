@@ -10,7 +10,11 @@ import ord.springframework.boot.test.context.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
+<<<<<<< HEAD
 @ContextConfiguration(classes = HomeController.class)
+=======
+@ContextConfiguration(classes = TummeyTurnerApplication.class)
+>>>>>>> eb1db408a30bacb0236e77b7f502b3490f83d6bc
 @SpringBootTest
 class TummeyTurnerApplicationTests {
 	@AutoWired
