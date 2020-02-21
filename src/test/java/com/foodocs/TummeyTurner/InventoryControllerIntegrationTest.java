@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.*;
 import org.springframework.boot.web.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = RestrauntConntroller.class, webEnviroment = SpringBootTest.WebEnviroment.RANDOM_Port)
+@SpringBootTest(classes = InventoryController.class, webEnviroment = SpringBootTest.WebEnviroment.RANDOM_Port)
 @ActiveProfile("prod")
 class TummeyTurnerIntegrationTests {
 
@@ -15,10 +15,9 @@ class TummeyTurnerIntegrationTests {
 	private TestRestTemplet templet;
 	@Test
 	public void test() {
-		TummyTurnerMenu restraunt = templet.getForObject(url: "/Restraunts/{id}", Restraunts.class, ...uriVaribles: 1);
-		System.out.println(restraunt);
+		TummyTurnerMenu restraunt = templet.getForObject(url: "/Inventory/{id}", Inventory.class, ...uriVaribles: 1);
+		System.out.println(inventory);
 
 	}
 
 }
-l

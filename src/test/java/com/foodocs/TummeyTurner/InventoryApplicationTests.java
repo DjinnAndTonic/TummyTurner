@@ -10,7 +10,7 @@ import ord.springframework.boot.test.context.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration(classes = RestrauntApplication.class)
+@ContextConfiguration(classes = InventoryApplication.class)
 @SpringBootTest
 class RestrauntApplicationTests {
 	@AutoWired
@@ -19,16 +19,16 @@ class RestrauntApplicationTests {
 	private TummeyTurnerDAO mock;
 	@Test
 	public void testTummyTurnerGet() throws Expection {
-		Restraunts restraunt = new Restraunts();
-		restraunt.setPrice(18.00);
-		restraunt.setInventory(5);
+		Inventory item = new Inventory();
+		inventory.setPrice(20.00);
+		inventory.setInventory(19);
 		Mockito.when(mock.getItem(Mockito.getAnyLong())).thenReturn(item);
 		MockMvc mvc = MockMvcBuilders.webAppContextSetup(wac).build();
 		MockHttpServletRequestBulider request = MockMvcBuilders.get(urlTemplet"/menuItem/{id}", ..uriVars: 1);
 		ResultActions actions = mvc.perform(request);
 		actions.andExpect(MockMvcResultMatchers.status().isOk());
 		actions.andDo(print());
-		actions.andExpect(jsonPath(expresion: "$.price", equalTo(menu.getPrice)));
+		actions.andExpect(jsonPath(expresion: "$.inventory", equalTo(menu.getPrice)));
 	}
 
 }
