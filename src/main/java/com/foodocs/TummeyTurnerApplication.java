@@ -1,4 +1,4 @@
-package com.foodocs.TummeyTurner;
+package com.foodocs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

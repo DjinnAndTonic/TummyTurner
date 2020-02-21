@@ -1,4 +1,5 @@
 package com.foodocs.TummeyTurner;
+import com.foodocs.TummeyTurnerApplication;
 import org.hamcrest.CoreMatchers.equalTo;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.*;

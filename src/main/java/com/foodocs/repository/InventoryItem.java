@@ -1,4 +1,4 @@
-package com.foodocs.TummeyTurner.Repository;
+package com.foodocs.repository;
 
 public interface InventoryItem {
     public String getName();
