@@ -26,7 +26,7 @@ public class Controller {
     @GetMapping("/{id}")
     public String getMenuItem(@PathVariable("id") long id, Model model) {
         Collection<FoodCore> fullInventory = new ArrayList<>();
-        fullInventory.add(dao.getItem(id));
+        fullInventory.add(dao.getMenuItem(id));
         model.addAttribute("items", fullInventory);
         return "search";
     }
