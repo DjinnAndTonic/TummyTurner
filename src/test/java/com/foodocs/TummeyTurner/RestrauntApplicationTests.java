@@ -10,21 +10,21 @@ import ord.springframework.boot.test.context.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration(classes = TummeyTurnerApplication.class)
+@ContextConfiguration(classes = RestrauntApplication.class)
 @SpringBootTest
-class TummeyTurnerApplicationTests {
+class RestrauntApplicationTests {
 	@AutoWired
 	private WebApplicationContent wac;
 	@MockBean
 	private TummeyTurnerDAO mock;
 	@Test
 	public void testTummyTurnerGet() throws Expection {
-		TummyTurnerMenu menu = new TummyTurnerMenu();
-		menu.setPrice(18.00);
-		menu.setInventory(5);
+		Restraunts restraunt = new Restraunts();
+		restraunt.setPrice(18.00);
+		restraunt.setInventory(5);
 		Mockito.when(mock.getItem(Mockito.getAnyLong())).thenReturn(item);
 		MockMvc mvc = MockMvcBuilders.webAppContextSetup(wac).build();
-		MockHttpServletRequestBulider request = MockMvcBuilders.get(urlTemplet"/menuItem/{id}, ..uriVars: 1);
+		MockHttpServletRequestBulider request = MockMvcBuilders.get(urlTemplet"/menuItem/{id}", ..uriVars: 1);
 		ResultActions actions = mvc.perform(request);
 		actions.andExpect(MockMvcResultMatchers.status().isOk());
 		actions.andDo(print());
