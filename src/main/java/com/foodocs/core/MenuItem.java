@@ -1,11 +1,17 @@
 package com.foodocs.core;
 
+import javax.persistence.*;
 import java.util.List;
-
+@Entity
+@Table(name="MENUITEMS")
 public class MenuItem {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="itemid")
     private int menuItemId;
     private String name;
     private double price;
+    @OneToMany(cascade =CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "item")
+
     private List<Ingredient> ingredientList;
 
     public MenuItem() {

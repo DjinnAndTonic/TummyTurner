@@ -1,8 +1,18 @@
 package com.foodocs.core;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="INGREDIENTS")
 public class Ingredient {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="ID")
     private int ingredientID;
     private String name;
+    @ManyToOne(targetEntity = MenuItem.class)
+    @JoinColumn(name="ITEMID")
+    private MenuItem item;
 
     public Ingredient(){
         super();
