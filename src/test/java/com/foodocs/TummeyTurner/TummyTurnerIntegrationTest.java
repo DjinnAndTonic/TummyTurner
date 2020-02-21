@@ -10,10 +10,8 @@ class TummeyTurnerIntegrationTests {
 
 	@Test
 	void contextLoads() {
-<<<<<<< Updated upstream
-=======
-		
->>>>>>> Stashed changes
+
 	}
 
 }
+l
