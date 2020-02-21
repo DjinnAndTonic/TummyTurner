@@ -1,4 +1,4 @@
-package com.foodocs.TummeyTurner;
+package com.foodocs;
 
 public class InventoryProperties {
 }

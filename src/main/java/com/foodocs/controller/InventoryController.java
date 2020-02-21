@@ -1,8 +1,8 @@
-package com.foodocs.TummeyTurner.Controller;
+package com.foodocs.controller;
 
-import com.foodocs.TummeyTurner.InventoryProperties;
-import com.foodocs.TummeyTurner.Repository.InventoryItem;
-import com.foodocs.TummeyTurner.Service.IngredientDAO;
+import com.foodocs.InventoryProperties;
+import com.foodocs.repository.InventoryItem;
+import com.foodocs.service.IngredientDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
